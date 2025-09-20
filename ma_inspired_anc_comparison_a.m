@@ -642,7 +642,7 @@ npop2 = repmat(empty_bee, pop, 1);
 for m = 1:pop
         
     % Select Source Site
-    i = RouletteWheelSelection(P);
+    i = roulette_wheel_selection(P);
         
     % Choose k randomly, not equal to i
     K = [1:i-1 i+1:pop];
@@ -1490,4 +1490,5 @@ legend('{\fontname{Times New Roman}QPSO}','{\fontname{Times New Roman}ABC}','{\f
      'NumColumns',1,'FontSize', 12, 'Location', 'southeast');
 grid on
 set(gca, 'GridLineStyle', ':');  % 设置为虚线 
+
 set(gca, 'GridAlpha', 1);  % 设置透明度
