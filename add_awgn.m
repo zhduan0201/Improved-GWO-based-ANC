@@ -1,4 +1,4 @@
-function [y,noise] = add_awgn(x,snr)%x是原始信号，y是加噪信号，snr是信噪比
+function [y,noise] = add_awgn(x,snr) %x: original signal, y: noisy signal, snr: signal-to-noise ratio
 noise=randn(size(x));
 Nx=length(x);
 signal_power=1/Nx*sum(x.*x);
